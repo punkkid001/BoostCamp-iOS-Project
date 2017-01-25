@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-Id-dgu">
+                                <rect key="frame" x="91" y="284" width="191" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZOC-5V-fTe"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhQ-c6-qWg">
+                                <rect key="frame" x="111.5" y="190" width="149" height="29"/>
+                                <segments>
+                                    <segment title="1-10"/>
+                                    <segment title="1-50"/>
+                                    <segment title="1-100"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MYx-hx-4Gh"/>
+                                </connections>
+                            </segmentedControl>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YRc-tl-BA1">
+                                <rect key="frame" x="77" y="258" width="221" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOO-zJ-wdw">
+                                <rect key="frame" x="174" y="229" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uW-8C-WBf">
+                                <rect key="frame" x="172" y="322" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ld0-fI-4de"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BOO-zJ-wdw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-94" id="5km-hD-Vbg"/>
+                            <constraint firstItem="Ghc-Id-dgu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="7O6-dA-WOe"/>
+                            <constraint firstItem="6uW-8C-WBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7xg-BT-44n"/>
+                            <constraint firstItem="jhQ-c6-qWg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-129.5" id="B4i-K7-boS"/>
+                            <constraint firstItem="YRc-tl-BA1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gts-pn-Iyz"/>
+                            <constraint firstItem="BOO-zJ-wdw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="OTA-UL-9W6"/>
+                            <constraint firstItem="Ghc-Id-dgu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="SYD-kN-Sim"/>
+                            <constraint firstItem="YRc-tl-BA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="TfC-8e-1XE"/>
+                            <constraint firstItem="6uW-8C-WBf" firstAttribute="top" secondItem="Ghc-Id-dgu" secondAttribute="bottom" constant="8" id="WXp-oK-Buk"/>
+                            <constraint firstItem="Ghc-Id-dgu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-34.5" id="a8Z-g7-Dvu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ghc-Id-dgu" secondAttribute="trailing" constant="77" id="cGL-d1-2zR"/>
+                            <constraint firstItem="6uW-8C-WBf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="3.5" id="eE5-Nf-Fy9"/>
+                            <constraint firstItem="jhQ-c6-qWg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1.5" id="f6j-FV-Ogm"/>
+                            <constraint firstItem="YRc-tl-BA1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-74.5" id="trF-yX-gdk"/>
+                            <constraint firstItem="jhQ-c6-qWg" firstAttribute="top" secondItem="YRc-tl-BA1" secondAttribute="bottom" constant="-70" id="xhC-tz-2Pd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerField" destination="Ghc-Id-dgu" id="Ecv-hK-vmR"/>
+                        <outlet property="modeSelection" destination="jhQ-c6-qWg" id="yvr-Fb-7ah"/>
+                        <outlet property="okButton" destination="6uW-8C-WBf" id="C3M-D8-R72"/>
+                        <outlet property="progressBar" destination="YRc-tl-BA1" id="BQc-4A-jOC"/>
+                        <outlet property="progressLabel" destination="BOO-zJ-wdw" id="F21-1R-8eP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
